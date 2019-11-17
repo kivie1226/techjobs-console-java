@@ -9,9 +9,7 @@ import java.io.IOException;
 import java.io.Reader;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
 import java.util.List;
-import java.util.Collections;
 
 /**
  * Created by LaunchCode
@@ -90,7 +88,7 @@ public class JobData {
         loadData();
         ArrayList <HashMap<String, String>> jobs = new ArrayList<>();
         for (HashMap<String, String> row: allJobs){
-            for (Map.Entry<String, String> job: row.entrySet()){
+            for (HashMap.Entry<String, String> job: row.entrySet()){
                 if (job.getValue().toUpperCase().contains(value) && !jobs.contains(row)){
                     jobs.add(row);
                 }
